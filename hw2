@@ -1,18 +1,7 @@
 import random
 
+
 def get_numbers_ticket(min, max, quantity):
-    if not (isinstance(min, int) and isinstance(max, int) and isinstance(quantity, int)):
-        print("Error: All arguments must be integers.")
-        return []
-
-    if min >= max:
-        print("Error: min must be less than max.")
-        return []
-
-    if quantity > (max - min + 1):
-        print("Error: quantity cannot be greater than the range of numbers.")
-        return []
-
     numbers = []
 
     for i in range(quantity):
