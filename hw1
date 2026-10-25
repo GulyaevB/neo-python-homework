@@ -1,4 +1,8 @@
-def greeting(name):
-    return f"Hello, {name}!"
 
-print(greeting("Boris"))
+from datetime import datetime
+
+def get_days_from_today(date):
+    given_date = datetime.strptime(date, "%Y-%m-%d")
+    print(given_date)
+
+get_days_from_today("2020-10-09")
