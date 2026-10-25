@@ -1,0 +1,10 @@
+import re
+
+
+def normalize_phone(phone_number):
+    cleaned_phone = re.sub(r"[^\d+]", "", phone_number)
+    return cleaned_phone
+
+
+print(normalize_phone("    +38(050)123-32-34"))
+print(normalize_phone("     0503451234"))
