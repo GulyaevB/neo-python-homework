@@ -1,0 +1,19 @@
+from datetime import datetime
+
+
+def get_upcoming_birthdays(users):
+    for user in users:
+        name = user["name"]
+        birthday = datetime.strptime(
+            user["birthday"], "%Y.%m.%d"
+        ).date()
+
+        print(name, birthday)
+
+
+users = [
+    {"name": "John Doe", "birthday": "1985.01.23"},
+    {"name": "Jane Smith", "birthday": "1990.01.27"}
+]
+
+get_upcoming_birthdays(users)
