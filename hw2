@@ -2,13 +2,13 @@ import random
 
 
 def get_numbers_ticket(min, max, quantity):
-    numbers = []
+    numbers = set()
 
-    for i in range(quantity):
+    while len(numbers) < quantity:
         number = random.randint(min, max)
-        numbers.append(number)
+        numbers.add(number)
 
-    return numbers
+    return sorted(numbers)
 
 
 print(get_numbers_ticket(1, 49, 6))
